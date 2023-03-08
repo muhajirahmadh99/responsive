@@ -1,0 +1,18 @@
+<div class="container mt-4 mb-4">
+    <!-- <h1 class="text-center mt-3">Customer Favorite <span class="highlight">Cars</span> </h1> -->
+    <div class="row">
+        <div class="col-lg-4 mt-3" *ngFor="let cd of cardata;index as i">
+            <div class="carbox">
+
+                <div class="text-center">
+                    <img src="{{cd.carimg}}" />
+                    <h1>{{cd.name}}</h1>
+                    <p>{{cd.price | currency : 'USD'}}</p>
+                    <a class="buy" [routerLink]="['/menu',cd.id]">Buy Now <i class="bi bi-bag"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container mt-4 mb-4 bg-light">
+    <!-- <h1 class="text-center mt-3">Customer Favorite <span class="highlight">Cars</span> </h1> -->
+    <a routerLink="/menu" class="placeorder">Back</a>
+    <div class="row">
+        <div class="col-lg-6 mt-3" *ngIf="menudata">
+            <div class="carbox">
+                <img src="{{menudata[0].carimg}}" />
+                <h1>{{menudata[0].name}}</h1>
+                <p>{{menudata[0].price | currency : 'USD'}}</p>
+            </div>
+           
+        </div>
+        
+        <div class="col-lg-6 wrap">
+            
+            <h1>Enter Your Details</h1>
+            <form class="form">
+                <div class="md-form mb-0">
+                    <input type="text" placeholder="Enter Your name" name="name" class="form-control">
+                    &nbsp;
+                    <input type="text" placeholder="Enter Your email" class="form-control">
+                    &nbsp;
+                    <textarea type="text" placeholder="Enter Your address" class="form-control"></textarea>
+                    &nbsp;
+                    </div>
+                    &nbsp;
+                    <a class="placeorder">Place Order</a>
+            </form>
+                
+    
+    
+    </div>
+    
